@@ -1,0 +1,12 @@
+<div class="text-center pt-5">
+    <h1 class="mb-5">{{ currentStepData?.title }}</h1>
+
+    <p class="mb-5">
+        {{ currentStepData?.description }}
+    </p>
+
+
+    <input class="form-control mb-3" type="text" (input)="getInput($event)" [(ngModel)]="inputValue" placeholder="ჩაწერე კოდი">
+
+    <button class="btn btn-primary w-100" [disabled]="disableButton" (click)="nextStep()">შემდეგი</button>
+</div>
